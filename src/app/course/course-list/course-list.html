@@ -1,0 +1,45 @@
+<div class="tv-header">
+  <span>TV Series</span>
+</div>
+
+<div class="content-wrap">
+  <div class="list-pane">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Channel</th>
+          <th>Seasons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of courses; trackBy: trackById"
+            (click)="pick(c)"
+            [class.active]="selected?.id === c.id">
+          <td class="fw-semibold">{{ c.id }}</td>
+          <td class="linkish">{{ c.name }}</td>
+          <td>{{ c.channel }}</td>
+          <td>{{ c.seasons }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="avg">Seasons average: {{ seasonsAverage }}</div>
+  </div>
+
+  <div class="detail-pane" *ngIf="selected as s">
+    <div class="v-divider"></div>
+    <div class="card shadow-sm detail-card">
+      <img *ngIf="s.poster" [src]="s.poster" class="card-img-top" alt="{{ s.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ s.name }}</h5>
+        <p class="card-text small mb-3">{{ s.description }}</p>
+        <a *ngIf="s.webpage"
+           class="btn btn-sm btn-outline-primary"
+           [href]="s.webpage" target="_blank" rel="noopener">
+          More info
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

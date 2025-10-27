@@ -1,0 +1,65 @@
+.tv-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: #1aa3a9;
+  color: #fff;
+  padding: .55rem .9rem;
+  border-radius: .25rem;
+  margin-bottom: 1rem;
+}
+
+.content-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+
+.list-pane {
+  flex: 0 1 55%;
+  min-width: 400px;
+}
+
+.detail-pane {
+  flex: 0 1 35%;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.v-divider {
+  width: 2px;
+  align-self: stretch;
+  background: #dfe3e8;
+  border-radius: 2px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead th {
+  font-weight: 700;
+  color: #344054;
+  border-bottom: 2px solid #e6e9ef;
+}
+.table tbody tr { cursor: pointer; }
+.table tbody tr:hover { background: #f7f9fc; }
+.table tbody tr.active { background: #eef7fb; }
+
+.avg { margin-top: .4rem; font-weight: 600; text-align: center; }
+
+.linkish { color: #0d6efd;text-decoration: underline; }
+
+.detail-card {
+  width: 100%;
+  max-width: 360px;
+}
+.card-img-top { 
+  object-fit: cover; 
+  max-height: 240px; 
+  border-bottom: 1px solid #ddd;
+}
